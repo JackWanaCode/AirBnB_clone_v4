@@ -1,6 +1,6 @@
 $(document).ready(function () {
   /*check the aminity */
-  var addCheck = function() {
+  let addCheck = function() {
     let list = [];
     $('input[type=checkbox]').each(function () {
       if (this.checked) {
@@ -13,7 +13,7 @@ $(document).ready(function () {
   /* update status */
   let url = 'http://0.0.0.0:5001/api/v1/status/';
   $.get(url, function(status) {
-    if (status === 'success') {
+    if (status.status === 'OK') {
       $('#api_status').addClass('available');
     } else {
       $('#api_status').removeClass('available');
