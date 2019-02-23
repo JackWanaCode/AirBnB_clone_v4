@@ -11,4 +11,10 @@ header {
 	height: 70px;
 	width: 100%;
 	border-bottom: 1px solid #CCCCCC;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+.available {
+	background-color: #ff545f;
 }
