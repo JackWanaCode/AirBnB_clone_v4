@@ -1,5 +1,6 @@
 $(document).ready(function () {
-  var addCheck = function() {
+  /*check the aminity */
+  let addCheck = function() {
     let list = [];
     $('input[type=checkbox]').each(function () {
       if (this.checked) {
