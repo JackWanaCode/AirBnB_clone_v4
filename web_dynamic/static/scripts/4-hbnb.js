@@ -63,4 +63,5 @@ $(document).ready(function () {
     get_place(amens_dic);
     id_list = []
   });
+  get_place({});
 });
