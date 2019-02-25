@@ -1,17 +1,20 @@
 $(document).ready(function () {
   /* check the aminity */
   let idList = [];
-  let addCheck = function () {
-    let list = [];
+  let list = [];
+  function addCheck () {
     $('input[type=checkbox]').each(function () {
       if (this.checked) {
         list.push($(this).attr('data-name'));
         idList.push($(this).attr('data-id'));
       }
     });
+  }
+  let adCheck = function () {
+    addCheck();
     $('div.amenities > h4').text(list.join(', '));
   };
-  $('input[type=checkbox]').on('click', addCheck);
+  $('input[type=checkbox]').on('click', adCheck);
   /* update status */
   let url = 'http://0.0.0.0:5001/api/v1/status/';
   $.get(url, function (status) {
@@ -55,6 +58,7 @@ $(document).ready(function () {
     });
   }
   $('button').click(function () {
+    addCheck();
     let amensDic = { 'amenities': [] };
     for (let i in idList) {
       amensDic['amenities'].push(idList[i]);
@@ -62,6 +66,7 @@ $(document).ready(function () {
     $('article').remove();
     getPlace(amensDic);
     idList = [];
+    list = [];
   });
   getPlace({});
 });
