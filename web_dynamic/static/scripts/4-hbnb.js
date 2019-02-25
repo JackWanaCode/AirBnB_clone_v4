@@ -3,6 +3,8 @@ $(document).ready(function () {
   let idList = [];
   let list = [];
   function addCheck () {
+    idList = [];
+    list = [];
     $('input[type=checkbox]').each(function () {
       if (this.checked) {
         list.push($(this).attr('data-name'));
@@ -14,8 +16,14 @@ $(document).ready(function () {
     addCheck();
     $('div.amenities > h4').text(list.join(', '));
   };
+  let offCheck = function () {
+    list = [];
+    addCheck();
+    $('div.amenities > h4').text(list.join(', '));
+  };
   $('input[type=checkbox]').on('click', adCheck);
-  /* update status */
+  $('input[type=checkbox]').off('click', offCheck);
+  /* Update status */
   let url = 'http://0.0.0.0:5001/api/v1/status/';
   $.get(url, function (status) {
     if (status.status === 'OK') {
