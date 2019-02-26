@@ -1,6 +1,6 @@
 $(document).ready(function () {
-  /*check the aminity */
-  let addCheck = function() {
+  /* check the aminity */
+  let addCheck = function () {
     let list = [];
     $('input[type=checkbox]').each(function () {
       if (this.checked) {
@@ -8,6 +8,6 @@ $(document).ready(function () {
       }
     });
     $('div.amenities > h4').text(list.join(', '));
-  }
+  };
   $('input[type=checkbox]').on('click', addCheck);
 });
