@@ -218,6 +218,10 @@ github repo
 * Carrie Ybay, [hicarrie](https://github.com/hicarrie) | [@hicarrie_](https://twitter.com/hicarrie_)
 * Jared Heck, [jarehec](https://github.com/jarehec) | [@jarehec](https://twitter.com/jarehec)
 
+* Erwin Gove, https://github.com/Hunt6666
+
+* Cuong Tran, https://github.com/JackWanaCode 
+
 ## License
 
 MIT License
